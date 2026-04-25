@@ -1,0 +1,884 @@
+[
+  {
+    "id": "ccfb8ea1-a56f-4d4d-ba11-ee8f6e53c2f0",
+    "text": "John Smith works at Google.",
+    "entities": [
+      {
+        "id": "739def8b-7b54-4086-9091-d691ff997acb",
+        "start": 0,
+        "end": 10,
+        "label": "MAN",
+        "source": "user",
+        "confidence": 1
+      },
+      {
+        "id": "4cfa9b4e-eb38-424f-8848-f88e69ddeaa5",
+        "start": 20,
+        "end": 26,
+        "label": "ORG",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "8fcc62ef-d3c8-47ab-a03b-1f3e9bbfa58b",
+    "text": "Sarah visited Paris last summer.",
+    "entities": [
+      {
+        "id": "2f019d10-231c-4297-a66f-f5b3db0a30d6",
+        "start": 0,
+        "end": 5,
+        "label": "WOMEN",
+        "source": "user",
+        "confidence": 1
+      },
+      {
+        "id": "7d77055b-7887-471d-8c72-c11fae133e13",
+        "start": 14,
+        "end": 19,
+        "label": "CITY",
+        "source": "user",
+        "confidence": 1
+      },
+      {
+        "id": "cade651c-dd4c-4d43-89cd-02ae163dd099",
+        "start": 20,
+        "end": 31,
+        "label": "DATE",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "0849954f-22a2-482e-9c95-5577b35abc70",
+    "text": "Microsoft was founded by Bill Gates.",
+    "entities": [
+      {
+        "id": "a264bd21-5577-4d8f-a1b6-860fc22c76de",
+        "start": 0,
+        "end": 9,
+        "label": "ORG",
+        "source": "model",
+        "confidence": null
+      },
+      {
+        "id": "3cf2c713-f842-42e7-9da5-09fe69d01a07",
+        "start": 25,
+        "end": 35,
+        "label": "PERSON",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "65c4de5c-b535-4d20-9852-f633a92d194c",
+    "text": "Elon Musk is the CEO of Tesla.",
+    "entities": [
+      {
+        "id": "2a5cf90b-2e8e-4a97-9452-ac98b4999996",
+        "start": 0,
+        "end": 9,
+        "label": "PERSON",
+        "source": "model",
+        "confidence": null
+      },
+      {
+        "id": "8f2da226-0aa6-465f-b863-69f9c91d0fbd",
+        "start": 24,
+        "end": 29,
+        "label": "ORG",
+        "source": "model",
+        "confidence": null
+      },
+      {
+        "id": "85f30604-bcd8-4028-9664-48e688fa3b55",
+        "start": 17,
+        "end": 20,
+        "label": "PROFESSION",
+        "source": "user",
+        "confidence": 1
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "b5df21b5-99ca-4173-b310-a9672558508b",
+    "text": "Amazon is headquartered in Seattle.",
+    "entities": [
+      {
+        "id": "8db67e88-7531-49f6-89d4-8f483702c0b8",
+        "start": 0,
+        "end": 6,
+        "label": "ORG",
+        "source": "model",
+        "confidence": null
+      },
+      {
+        "id": "c10933c4-4e8e-4626-8548-446bc9df4d53",
+        "start": 27,
+        "end": 34,
+        "label": "GPE",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "9b3fcffd-699b-4677-a9d6-98262ccb33c0",
+    "text": "The meeting is scheduled for March 15, 2024.",
+    "entities": [
+      {
+        "id": "7489ad5d-7e45-45e6-9104-0d41f8057637",
+        "start": 29,
+        "end": 43,
+        "label": "DATE",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "5e723ebb-820f-4429-aa70-b7ad9fcb675c",
+    "text": "He was born on July 4th, 1990.",
+    "entities": [
+      {
+        "id": "e4fe28e2-ab33-4154-9326-18defed3f267",
+        "start": 15,
+        "end": 29,
+        "label": "DATE",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "c0699123-4a9c-453f-b34d-25c86bdfcaad",
+    "text": "The event starts at 10:30 AM.",
+    "entities": [
+      {
+        "id": "0cddac00-6742-4b8d-983b-70974c68e4e0",
+        "start": 20,
+        "end": 28,
+        "label": "TIME",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "b4cff56d-330a-4c6f-aa96-818869af8957",
+    "text": "We met in December 2022.",
+    "entities": [
+      {
+        "id": "bbd8f374-223d-45f0-af08-792ba9ba9e07",
+        "start": 10,
+        "end": 23,
+        "label": "DATE",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "cc11690e-6d5f-4665-b7a0-253e36f7c3c1",
+    "text": "The deadline is next Friday.",
+    "entities": [
+      {
+        "id": "8fe43a4b-9792-43fb-b585-9b186bfd78f2",
+        "start": 16,
+        "end": 27,
+        "label": "DATE",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "c5763ff4-11e1-4a25-b5e2-ebdbcdc291ef",
+    "text": "I live in New York City.",
+    "entities": [
+      {
+        "id": "cd664645-beaf-41e5-9afa-32430439f393",
+        "start": 10,
+        "end": 23,
+        "label": "GPE",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "2170b314-ea6d-4424-9c29-f758c613d477",
+    "text": "She traveled from London to Berlin.",
+    "entities": [
+      {
+        "id": "e34947ed-7de0-4b12-b8e7-15b25e7ae2b2",
+        "start": 18,
+        "end": 24,
+        "label": "GPE",
+        "source": "model",
+        "confidence": null
+      },
+      {
+        "id": "bf9bab76-13e0-424d-81eb-be4fa4587b0c",
+        "start": 28,
+        "end": 34,
+        "label": "GPE",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "dbd48528-6407-4733-a099-e65246cc5233",
+    "text": "The Eiffel Tower is in Paris.",
+    "entities": [
+      {
+        "id": "29f34fe8-e2d2-4b7c-b83d-88d79fc6b4a0",
+        "start": 0,
+        "end": 16,
+        "label": "LOC",
+        "source": "model",
+        "confidence": null
+      },
+      {
+        "id": "5f12fa9f-7cf3-4919-8e62-db91fc6abf99",
+        "start": 23,
+        "end": 28,
+        "label": "GPE",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "9d27baf6-b2f6-41a8-a09c-d95a2adeb19c",
+    "text": "They moved to California last year.",
+    "entities": [
+      {
+        "id": "1e81fb25-fd23-4169-a96a-f4e47b463c39",
+        "start": 14,
+        "end": 24,
+        "label": "GPE",
+        "source": "model",
+        "confidence": null
+      },
+      {
+        "id": "f2dde9d7-683f-4705-88c7-6a5ea16f3dc9",
+        "start": 25,
+        "end": 34,
+        "label": "DATE",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "aa0ec479-9f99-4e7c-81f4-39544b35675c",
+    "text": "He works in Silicon Valley.",
+    "entities": [
+      {
+        "id": "7e4a8b0e-696f-4018-bade-488379f3207c",
+        "start": 12,
+        "end": 26,
+        "label": "LOC",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "71da44b2-6032-458e-8fea-10cbcf4ccd3a",
+    "text": "Apple released a new iPhone.",
+    "entities": [
+      {
+        "id": "bb699409-e81e-423f-a99d-53f91214baed",
+        "start": 0,
+        "end": 5,
+        "label": "ORG",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "a05645f2-af54-45f3-b346-ba48fd8bcf3c",
+    "text": "Facebook changed its name to Meta.",
+    "entities": [
+      {
+        "id": "4dd54789-d1f0-4308-bcd9-20ff12051fb5",
+        "start": 29,
+        "end": 33,
+        "label": "ORG",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "e3bca122-5cd8-43c2-8aa3-5eb2db437cc6",
+    "text": "NASA launched a new satellite.",
+    "entities": [
+      {
+        "id": "871999ac-de43-4af0-84a4-fdf11ef360ef",
+        "start": 0,
+        "end": 4,
+        "label": "ORG",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "e4e01026-bebd-42bc-85c0-631bec64c073",
+    "text": "The United Nations held a conference.",
+    "entities": [
+      {
+        "id": "5286fd73-582e-443b-bd20-e48ae3a56d04",
+        "start": 0,
+        "end": 18,
+        "label": "ORG",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "2572ac2b-35b2-449f-b6e6-a3cc90365aba",
+    "text": "Goldman Sachs reported strong earnings.",
+    "entities": [
+      {
+        "id": "d803b7d1-ad5a-43a4-9237-aa28579d9935",
+        "start": 0,
+        "end": 13,
+        "label": "ORG",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "9c129179-011b-410b-ba7e-ef66fa080711",
+    "text": "The project cost $5 million.",
+    "entities": [
+      {
+        "id": "42149105-618f-436b-b9a1-49eb64e440b9",
+        "start": 17,
+        "end": 27,
+        "label": "MONEY",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "62421905-f6c5-4800-8aa1-97584d95e1f5",
+    "text": "He earns €3,000 per month.",
+    "entities": [
+      {
+        "id": "dce5858a-df6c-4723-b488-9aea933a7d18",
+        "start": 10,
+        "end": 15,
+        "label": "MONEY",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "87c5429d-8d0a-4837-b992-49486f46f5c5",
+    "text": "The stock price reached 150 dollars.",
+    "entities": [
+      {
+        "id": "57a6929f-d5d3-4b50-b216-ddeec8331205",
+        "start": 24,
+        "end": 35,
+        "label": "MONEY",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "00c93a12-9e6a-4c06-8bbe-da40fdce5adb",
+    "text": "They raised £2 billion in funding.",
+    "entities": [
+      {
+        "id": "0680f8ce-226b-4f92-a657-b93bad820eaf",
+        "start": 12,
+        "end": 22,
+        "label": "MONEY",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "934fa262-62ec-4ace-be42-b27a8dca94a9",
+    "text": "The laptop costs 1200 USD.",
+    "entities": [
+      {
+        "id": "be1a4c20-e388-47ef-aea1-b4829461ca15",
+        "start": 17,
+        "end": 25,
+        "label": "QUANTITY",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "fe303716-6746-41e2-b5a7-a818ecd4c3e0",
+    "text": "John Doe bought a car from Toyota for $20,000.",
+    "entities": [
+      {
+        "id": "49a8b24d-1dd2-4b43-a2d0-c61ffa5cef15",
+        "start": 0,
+        "end": 8,
+        "label": "PERSON",
+        "source": "model",
+        "confidence": null
+      },
+      {
+        "id": "d0fe3deb-b9eb-4966-8ac9-4ee45107f5d1",
+        "start": 27,
+        "end": 33,
+        "label": "ORG",
+        "source": "model",
+        "confidence": null
+      },
+      {
+        "id": "8dbe0978-8004-4687-868d-e3bda5f87539",
+        "start": 39,
+        "end": 45,
+        "label": "MONEY",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "0cf55cc4-997f-48f5-96b8-e48846e4e1d5",
+    "text": "Google announced the event on January 10th, 2023.",
+    "entities": [
+      {
+        "id": "417fee48-a9ee-48f7-bc2a-688b5e45ed9e",
+        "start": 0,
+        "end": 6,
+        "label": "ORG",
+        "source": "model",
+        "confidence": null
+      },
+      {
+        "id": "45ac3661-7370-4e48-944c-12154f11ad33",
+        "start": 30,
+        "end": 48,
+        "label": "DATE",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "3cc1b51d-8ce1-4589-bc31-c1b4151b9a88",
+    "text": "Tesla opened a factory in Berlin in 2021.",
+    "entities": [
+      {
+        "id": "36de3a7e-ae2e-45e2-8de0-f2076a35c5e2",
+        "start": 0,
+        "end": 5,
+        "label": "ORG",
+        "source": "model",
+        "confidence": null
+      },
+      {
+        "id": "23fbfdf3-be4f-4460-8a4c-2318677be5f4",
+        "start": 26,
+        "end": 32,
+        "label": "GPE",
+        "source": "model",
+        "confidence": null
+      },
+      {
+        "id": "1e032812-a28c-4f69-afad-e394935fe483",
+        "start": 36,
+        "end": 40,
+        "label": "DATE",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "fd5e8a25-9912-4b17-ad66-8a5594078b51",
+    "text": "Amazon hired 500 employees in India last year.",
+    "entities": [
+      {
+        "id": "03ae5985-14ca-466f-854b-7d7321c2383f",
+        "start": 0,
+        "end": 6,
+        "label": "ORG",
+        "source": "model",
+        "confidence": null
+      },
+      {
+        "id": "1cb54dfb-b1b2-40c6-8301-b6f515dbeb10",
+        "start": 13,
+        "end": 16,
+        "label": "CARDINAL",
+        "source": "model",
+        "confidence": null
+      },
+      {
+        "id": "8527375a-e0b4-4a51-9613-50072c4c7111",
+        "start": 30,
+        "end": 35,
+        "label": "GPE",
+        "source": "model",
+        "confidence": null
+      },
+      {
+        "id": "161e3cb0-9c91-443a-a441-296af9c37795",
+        "start": 36,
+        "end": 45,
+        "label": "DATE",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "4578ed3a-50ab-4eaf-9d95-bd45b80fc98a",
+    "text": "The conference in Dubai was organized by IBM.",
+    "entities": [
+      {
+        "id": "f544fffe-3fbd-42da-8d73-358734892a9f",
+        "start": 18,
+        "end": 23,
+        "label": "GPE",
+        "source": "model",
+        "confidence": null
+      },
+      {
+        "id": "44aa5550-b0ed-47fe-b89f-48fbd00f335e",
+        "start": 41,
+        "end": 44,
+        "label": "ORG",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "7ee2ac3c-521d-4d67-a75d-6f4bb21118d5",
+    "text": "Dr. Emily Watson from Harvard University spoke at the event.",
+    "entities": [
+      {
+        "id": "495ac4cf-202e-4ea9-b514-83dcf891ae7f",
+        "start": 4,
+        "end": 16,
+        "label": "PERSON",
+        "source": "model",
+        "confidence": null
+      },
+      {
+        "id": "476a0f86-fec6-425f-9689-f87751efca2a",
+        "start": 22,
+        "end": 40,
+        "label": "ORG",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "1d9c988b-3d23-4683-9369-47e6e69a5ad1",
+    "text": "The flight AF123 departed from Paris at 6:45 PM.",
+    "entities": [
+      {
+        "id": "35e117f8-2d79-42fd-be07-ec9fd5f92fdc",
+        "start": 11,
+        "end": 16,
+        "label": "ORG",
+        "source": "model",
+        "confidence": null
+      },
+      {
+        "id": "327e0224-4bd3-4807-927e-60d8ebafa67c",
+        "start": 31,
+        "end": 36,
+        "label": "GPE",
+        "source": "model",
+        "confidence": null
+      },
+      {
+        "id": "46e96a11-1d83-4deb-a2f4-048fb9c23a3f",
+        "start": 40,
+        "end": 47,
+        "label": "TIME",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "56b0fe7e-55a0-430c-86e1-4f1afe4db1e4",
+    "text": "Cristiano Ronaldo signed a contract worth €200 million.",
+    "entities": [
+      {
+        "id": "3ff56a3c-70b9-4bdb-90f7-f94a5d4a65db",
+        "start": 0,
+        "end": 17,
+        "label": "PERSON",
+        "source": "model",
+        "confidence": null
+      },
+      {
+        "id": "849b576e-c221-4dba-a429-c5dc0fab0a0e",
+        "start": 42,
+        "end": 54,
+        "label": "MONEY",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "7dd4d403-d70d-4c6d-8b3c-f7d1972db3f9",
+    "text": "The iPhone 15 Pro was launched in September 2023.",
+    "entities": [
+      {
+        "id": "3e0b66c3-d1bb-4c3a-85bf-06384b9a8ced",
+        "start": 11,
+        "end": 13,
+        "label": "CARDINAL",
+        "source": "model",
+        "confidence": null
+      },
+      {
+        "id": "26e38d99-ccf8-40ed-8b3c-adc7cdabf50d",
+        "start": 34,
+        "end": 48,
+        "label": "DATE",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "5b0f936e-0de0-4926-95d2-de7cd5bdda41",
+    "text": "The WHO declared COVID-19 a pandemic in March 2020.",
+    "entities": [
+      {
+        "id": "07bd3f29-bd30-480f-9482-a94a0821223a",
+        "start": 40,
+        "end": 50,
+        "label": "DATE",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "ee05fbc0-a5a4-4133-b132-30db83b8e3d7",
+    "text": "just met @john in nyc yesterday lol",
+    "entities": [
+      {
+        "id": "c6b8d647-987c-4a01-9c68-20082c8af445",
+        "start": 22,
+        "end": 31,
+        "label": "DATE",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "da4cb96e-2cce-469e-bc9c-7c4568b72874",
+    "text": "gonna visit LA next week",
+    "entities": [
+      {
+        "id": "e3ee6884-1a8d-4ee4-8ba4-ef6cbcbb1001",
+        "start": 12,
+        "end": 14,
+        "label": "GPE",
+        "source": "model",
+        "confidence": null
+      },
+      {
+        "id": "a155093a-d21f-42b5-abac-735e24718e26",
+        "start": 15,
+        "end": 24,
+        "label": "DATE",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "b0c332f2-c48e-43e8-b872-8e1270ee1754",
+    "text": "apple dropping new stuff this monday",
+    "entities": [
+      {
+        "id": "455df5d8-ecf5-43aa-b240-2c127cc31feb",
+        "start": 25,
+        "end": 36,
+        "label": "DATE",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "ebd4b206-827e-4016-8750-9c333f1f99a1",
+    "text": "paid like 2k for this laptop smh",
+    "entities": [
+      {
+        "id": "43152f97-3739-4fc1-a424-8d087e79e616",
+        "start": 10,
+        "end": 12,
+        "label": "CARDINAL",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "2e4e5008-62de-4c0f-94d1-352554e983d4",
+    "text": "elon tweeted about spacex again",
+    "entities": [],
+    "validated": true
+  },
+  {
+    "id": "761e79f4-b744-4650-bd31-1da3c1d4159f",
+    "text": "The patient was diagnosed with diabetes at Mayo Clinic.",
+    "entities": [
+      {
+        "id": "a78ea6ae-5465-4d36-ac7e-632b11c02953",
+        "start": 43,
+        "end": 54,
+        "label": "ORG",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "6ee1084b-ce8d-4151-927d-ad4eb9505969",
+    "text": "Pfizer released a new vaccine in 2021.",
+    "entities": [
+      {
+        "id": "bf809283-bb04-41ac-9ad8-1139edce9d86",
+        "start": 33,
+        "end": 37,
+        "label": "DATE",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "b02ee37d-0dd6-44c5-8128-0c1d410a08f2",
+    "text": "The NASDAQ index rose by 2%.",
+    "entities": [
+      {
+        "id": "562cb01c-ec81-4218-83af-8dd4d2e7dc9b",
+        "start": 4,
+        "end": 10,
+        "label": "ORG",
+        "source": "model",
+        "confidence": null
+      },
+      {
+        "id": "724f26ad-e064-49d6-b083-7b4fdbbc3b51",
+        "start": 25,
+        "end": 27,
+        "label": "PERCENT",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "2962957d-8a09-43c8-9ce9-be87582106b8",
+    "text": "Goldman Sachs upgraded Tesla stock.",
+    "entities": [
+      {
+        "id": "ece3fd12-ca26-4bdc-bdc5-eedd5ae9eff6",
+        "start": 0,
+        "end": 13,
+        "label": "ORG",
+        "source": "model",
+        "confidence": null
+      },
+      {
+        "id": "4c603076-694e-44a5-a977-38ba81636995",
+        "start": 23,
+        "end": 28,
+        "label": "NORP",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  },
+  {
+    "id": "49308ce2-3af3-4388-97f6-6b6540c70006",
+    "text": "The MRI scan was done at Johns Hopkins Hospital.",
+    "entities": [
+      {
+        "id": "65110eed-97e4-4a67-9bff-efc193d21393",
+        "start": 25,
+        "end": 47,
+        "label": "ORG",
+        "source": "model",
+        "confidence": null
+      }
+    ],
+    "validated": true
+  }
+]

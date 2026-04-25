@@ -1,0 +1,671 @@
+[
+  [
+    "John Smith works at Google.",
+    {
+      "entities": [
+        [
+          0,
+          10,
+          "MAN"
+        ],
+        [
+          20,
+          26,
+          "ORG"
+        ]
+      ]
+    }
+  ],
+  [
+    "Sarah visited Paris last summer.",
+    {
+      "entities": [
+        [
+          0,
+          5,
+          "WOMEN"
+        ],
+        [
+          14,
+          19,
+          "CITY"
+        ],
+        [
+          20,
+          31,
+          "DATE"
+        ]
+      ]
+    }
+  ],
+  [
+    "Microsoft was founded by Bill Gates.",
+    {
+      "entities": [
+        [
+          0,
+          9,
+          "ORG"
+        ],
+        [
+          25,
+          35,
+          "PERSON"
+        ]
+      ]
+    }
+  ],
+  [
+    "Elon Musk is the CEO of Tesla.",
+    {
+      "entities": [
+        [
+          0,
+          9,
+          "PERSON"
+        ],
+        [
+          24,
+          29,
+          "ORG"
+        ],
+        [
+          17,
+          20,
+          "PROFESSION"
+        ]
+      ]
+    }
+  ],
+  [
+    "Amazon is headquartered in Seattle.",
+    {
+      "entities": [
+        [
+          0,
+          6,
+          "ORG"
+        ],
+        [
+          27,
+          34,
+          "GPE"
+        ]
+      ]
+    }
+  ],
+  [
+    "The meeting is scheduled for March 15, 2024.",
+    {
+      "entities": [
+        [
+          29,
+          43,
+          "DATE"
+        ]
+      ]
+    }
+  ],
+  [
+    "He was born on July 4th, 1990.",
+    {
+      "entities": [
+        [
+          15,
+          29,
+          "DATE"
+        ]
+      ]
+    }
+  ],
+  [
+    "The event starts at 10:30 AM.",
+    {
+      "entities": [
+        [
+          20,
+          28,
+          "TIME"
+        ]
+      ]
+    }
+  ],
+  [
+    "We met in December 2022.",
+    {
+      "entities": [
+        [
+          10,
+          23,
+          "DATE"
+        ]
+      ]
+    }
+  ],
+  [
+    "The deadline is next Friday.",
+    {
+      "entities": [
+        [
+          16,
+          27,
+          "DATE"
+        ]
+      ]
+    }
+  ],
+  [
+    "I live in New York City.",
+    {
+      "entities": [
+        [
+          10,
+          23,
+          "GPE"
+        ]
+      ]
+    }
+  ],
+  [
+    "She traveled from London to Berlin.",
+    {
+      "entities": [
+        [
+          18,
+          24,
+          "GPE"
+        ],
+        [
+          28,
+          34,
+          "GPE"
+        ]
+      ]
+    }
+  ],
+  [
+    "The Eiffel Tower is in Paris.",
+    {
+      "entities": [
+        [
+          0,
+          16,
+          "LOC"
+        ],
+        [
+          23,
+          28,
+          "GPE"
+        ]
+      ]
+    }
+  ],
+  [
+    "They moved to California last year.",
+    {
+      "entities": [
+        [
+          14,
+          24,
+          "GPE"
+        ],
+        [
+          25,
+          34,
+          "DATE"
+        ]
+      ]
+    }
+  ],
+  [
+    "He works in Silicon Valley.",
+    {
+      "entities": [
+        [
+          12,
+          26,
+          "LOC"
+        ]
+      ]
+    }
+  ],
+  [
+    "Apple released a new iPhone.",
+    {
+      "entities": [
+        [
+          0,
+          5,
+          "ORG"
+        ]
+      ]
+    }
+  ],
+  [
+    "Facebook changed its name to Meta.",
+    {
+      "entities": [
+        [
+          29,
+          33,
+          "ORG"
+        ]
+      ]
+    }
+  ],
+  [
+    "NASA launched a new satellite.",
+    {
+      "entities": [
+        [
+          0,
+          4,
+          "ORG"
+        ]
+      ]
+    }
+  ],
+  [
+    "The United Nations held a conference.",
+    {
+      "entities": [
+        [
+          0,
+          18,
+          "ORG"
+        ]
+      ]
+    }
+  ],
+  [
+    "Goldman Sachs reported strong earnings.",
+    {
+      "entities": [
+        [
+          0,
+          13,
+          "ORG"
+        ]
+      ]
+    }
+  ],
+  [
+    "The project cost $5 million.",
+    {
+      "entities": [
+        [
+          17,
+          27,
+          "MONEY"
+        ]
+      ]
+    }
+  ],
+  [
+    "He earns €3,000 per month.",
+    {
+      "entities": [
+        [
+          10,
+          15,
+          "MONEY"
+        ]
+      ]
+    }
+  ],
+  [
+    "The stock price reached 150 dollars.",
+    {
+      "entities": [
+        [
+          24,
+          35,
+          "MONEY"
+        ]
+      ]
+    }
+  ],
+  [
+    "They raised £2 billion in funding.",
+    {
+      "entities": [
+        [
+          12,
+          22,
+          "MONEY"
+        ]
+      ]
+    }
+  ],
+  [
+    "The laptop costs 1200 USD.",
+    {
+      "entities": [
+        [
+          17,
+          25,
+          "QUANTITY"
+        ]
+      ]
+    }
+  ],
+  [
+    "John Doe bought a car from Toyota for $20,000.",
+    {
+      "entities": [
+        [
+          0,
+          8,
+          "PERSON"
+        ],
+        [
+          27,
+          33,
+          "ORG"
+        ],
+        [
+          39,
+          45,
+          "MONEY"
+        ]
+      ]
+    }
+  ],
+  [
+    "Google announced the event on January 10th, 2023.",
+    {
+      "entities": [
+        [
+          0,
+          6,
+          "ORG"
+        ],
+        [
+          30,
+          48,
+          "DATE"
+        ]
+      ]
+    }
+  ],
+  [
+    "Tesla opened a factory in Berlin in 2021.",
+    {
+      "entities": [
+        [
+          0,
+          5,
+          "ORG"
+        ],
+        [
+          26,
+          32,
+          "GPE"
+        ],
+        [
+          36,
+          40,
+          "DATE"
+        ]
+      ]
+    }
+  ],
+  [
+    "Amazon hired 500 employees in India last year.",
+    {
+      "entities": [
+        [
+          0,
+          6,
+          "ORG"
+        ],
+        [
+          13,
+          16,
+          "CARDINAL"
+        ],
+        [
+          30,
+          35,
+          "GPE"
+        ],
+        [
+          36,
+          45,
+          "DATE"
+        ]
+      ]
+    }
+  ],
+  [
+    "The conference in Dubai was organized by IBM.",
+    {
+      "entities": [
+        [
+          18,
+          23,
+          "GPE"
+        ],
+        [
+          41,
+          44,
+          "ORG"
+        ]
+      ]
+    }
+  ],
+  [
+    "Dr. Emily Watson from Harvard University spoke at the event.",
+    {
+      "entities": [
+        [
+          4,
+          16,
+          "PERSON"
+        ],
+        [
+          22,
+          40,
+          "ORG"
+        ]
+      ]
+    }
+  ],
+  [
+    "The flight AF123 departed from Paris at 6:45 PM.",
+    {
+      "entities": [
+        [
+          11,
+          16,
+          "ORG"
+        ],
+        [
+          31,
+          36,
+          "GPE"
+        ],
+        [
+          40,
+          47,
+          "TIME"
+        ]
+      ]
+    }
+  ],
+  [
+    "Cristiano Ronaldo signed a contract worth €200 million.",
+    {
+      "entities": [
+        [
+          0,
+          17,
+          "PERSON"
+        ],
+        [
+          42,
+          54,
+          "MONEY"
+        ]
+      ]
+    }
+  ],
+  [
+    "The iPhone 15 Pro was launched in September 2023.",
+    {
+      "entities": [
+        [
+          11,
+          13,
+          "CARDINAL"
+        ],
+        [
+          34,
+          48,
+          "DATE"
+        ]
+      ]
+    }
+  ],
+  [
+    "The WHO declared COVID-19 a pandemic in March 2020.",
+    {
+      "entities": [
+        [
+          40,
+          50,
+          "DATE"
+        ]
+      ]
+    }
+  ],
+  [
+    "just met @john in nyc yesterday lol",
+    {
+      "entities": [
+        [
+          22,
+          31,
+          "DATE"
+        ]
+      ]
+    }
+  ],
+  [
+    "gonna visit LA next week",
+    {
+      "entities": [
+        [
+          12,
+          14,
+          "GPE"
+        ],
+        [
+          15,
+          24,
+          "DATE"
+        ]
+      ]
+    }
+  ],
+  [
+    "apple dropping new stuff this monday",
+    {
+      "entities": [
+        [
+          25,
+          36,
+          "DATE"
+        ]
+      ]
+    }
+  ],
+  [
+    "paid like 2k for this laptop smh",
+    {
+      "entities": [
+        [
+          10,
+          12,
+          "CARDINAL"
+        ]
+      ]
+    }
+  ],
+  [
+    "elon tweeted about spacex again",
+    {
+      "entities": []
+    }
+  ],
+  [
+    "The patient was diagnosed with diabetes at Mayo Clinic.",
+    {
+      "entities": [
+        [
+          43,
+          54,
+          "ORG"
+        ]
+      ]
+    }
+  ],
+  [
+    "Pfizer released a new vaccine in 2021.",
+    {
+      "entities": [
+        [
+          33,
+          37,
+          "DATE"
+        ]
+      ]
+    }
+  ],
+  [
+    "The NASDAQ index rose by 2%.",
+    {
+      "entities": [
+        [
+          4,
+          10,
+          "ORG"
+        ],
+        [
+          25,
+          27,
+          "PERCENT"
+        ]
+      ]
+    }
+  ],
+  [
+    "Goldman Sachs upgraded Tesla stock.",
+    {
+      "entities": [
+        [
+          0,
+          13,
+          "ORG"
+        ],
+        [
+          23,
+          28,
+          "NORP"
+        ]
+      ]
+    }
+  ],
+  [
+    "The MRI scan was done at Johns Hopkins Hospital.",
+    {
+      "entities": [
+        [
+          25,
+          47,
+          "ORG"
+        ]
+      ]
+    }
+  ]
+]
