@@ -27,3 +27,15 @@ Project configurations, documents, and annotations are saved in the `backend/dat
 - `backend/data/project_registry.json`: Mapping of project names to IDs.
 - `backend/data/<project_id>/config.json`: Project settings and label hierarchy.
 - `backend/data/<project_id>/docs.json`: All documents and their current entity states.
+
+## 🧠 Custom Model Training
+
+The repository includes a `training.ipynb` notebook that allows you to train your own Named Entity Recognition (NER) model using your annotated data.
+
+- The notebook loads training data directly from the `backend/data` folder.
+- It uses the validated annotations created inside the platform.
+- You can customize the training pipeline .
+- The trained model can be used for your specific needs.
+
+This enables a full workflow:
+**Annotation → Training → Evaluation → Improvement**
