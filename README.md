@@ -9,24 +9,12 @@ git clone https://github.com/adiren7/ner_benchmark_app.git
 cd ner_benchmark_app_backend
 ```
 
-### Backend (FastAPI)
-```bash
-cd backend
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-pip install -r requirements.txt
-```
-
-### Frontend
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-### Start the services
+### Services
 ```bash
 docker compose up -d --build
+
+docker compose down # stop
+docker compose down -v # remove volumes
 ```
 
 - **Frontend**: [http://localhost:8080](http://localhost:8080)

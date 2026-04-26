@@ -26,16 +26,17 @@ export type EntityTextProps = {
   entities: NerEntity[];
   onEntityClick: (e: NerEntity) => void;
   selectedEntityId: string | null;
+  hideLabels?: boolean;
 };
 
 export const EntityText = forwardRef<HTMLDivElement, EntityTextProps>(function EntityText(
-  { text, entities, onEntityClick, selectedEntityId },
+  { text, entities, onEntityClick, selectedEntityId, hideLabels },
   ref
 ) {
   const segs = useMemo(() => buildSegments(text, entities), [text, entities]);
 
   return (
-    <div ref={ref} className="entity-text">
+    <div ref={ref} className={`entity-text ${hideLabels ? "hide-labels" : ""}`}>
       {segs.map((s, idx) => {
         if (s.kind === "text") {
           return <span key={idx}>{s.str}</span>;
@@ -51,10 +52,10 @@ export const EntityText = forwardRef<HTMLDivElement, EntityTextProps>(function E
             data-label={entity.label}
             className="entity-chip"
             style={{
-              background: isSelected ? "var(--accent-glow)" : c.bg,
-              color: "#ffffff", // High contrast white for text inside chip
-              borderColor: isSelected ? "var(--accent)" : c.border,
-              boxShadow: isSelected ? `0 0 15px var(--accent-glow)` : "none",
+              background: hideLabels ? "transparent" : (isSelected ? "var(--accent-glow)" : c.bg),
+              color: hideLabels ? "var(--text)" : "#ffffff",
+              borderColor: hideLabels ? "transparent" : (isSelected ? "var(--accent)" : c.border),
+              boxShadow: (isSelected && !hideLabels) ? `0 0 15px var(--accent-glow)` : "none",
               "--chip-base": c.base 
             } as any}
             onClick={(e) => { e.stopPropagation(); onEntityClick(entity); }}

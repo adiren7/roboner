@@ -1,19 +1,24 @@
-node_modules
-dist
-*.local
-.DS_Store
-
 venv/
 .venv/
-
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
 
-data/*
-!data/.gitkeep
 
 .env
+*.env
+backend/.env
+
 *.log
+
+backend/data/*
+!backend/data/.gitkeep
+
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/*.local
+
+models/
+
 .DS_Store
+frontend/.DS_Store

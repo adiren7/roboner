@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import {
   addEntity,
   deleteEntity,
@@ -73,6 +73,7 @@ export function AnnotationPanel({
       if (!off || off.end <= off.start) return;
 
       setAddRange({ start: off.start, end: off.end, x: e.clientX, y: e.clientY });
+      setChangeLabelMenu(null); // Fix: Clear label change menu if selecting new
     }, 50);
   };
 
@@ -176,15 +177,60 @@ export function AnnotationPanel({
     }
   };
 
+  useEffect(() => {
+    const handleGlobalClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      // Close if clicking outside menus and outside the interactive entity chips
+      if (!target.closest(".floating-menu") && !target.closest(".entity-chip")) {
+        setAddRange(null);
+        setChangeLabelMenu(null);
+      }
+    };
+    
+    // Use mousedown to trigger before selection might change
+    document.addEventListener("mousedown", handleGlobalClick);
+    return () => document.removeEventListener("mousedown", handleGlobalClick);
+  }, []);
+
+  const handleSpanChange = async () => {
+    const sel = window.getSelection();
+    if (!sel || sel.isCollapsed || !selectedEntity || !textRef.current) return;
+    const off = getSelectionOffsets(textRef.current, doc.text);
+    if (!off) return;
+    if (hasOverlap(off.start, off.end, doc.entities, selectedEntity.id)) {
+        alert("New span overlaps with existing entity");
+        return;
+    }
+    try {
+      const updated = await patchSpan(projectId, doc.id, selectedEntity.id, off.start, off.end);
+      onDocChange({
+        ...doc,
+        entities: doc.entities.map(e => e.id === selectedEntity.id ? updated : e).sort((a, b) => a.start - b.start)
+      });
+      setSelectedEntity(updated);
+      setEditSpanMode(false);
+    } catch (e: any) {
+      alert(e.message);
+    }
+  };
+
   const renderLabelTree = (h: LabelHierarchy, depth = 0) => {
     return Object.entries(h).map(([label, children]) => (
       <div key={label} style={{ marginLeft: depth * 12 }}>
         <div 
           draggable 
           onDragStart={(e) => onDragStart(e, label)}
-          onDragOver={(e) => { e.preventDefault(); if (isDragging !== label) setDropTarget(label); }}
+          onDragOver={(e) => { 
+            e.preventDefault(); 
+            e.stopPropagation(); // Focus on THIS label zone
+            if (isDragging !== label) setDropTarget(label); 
+          }}
           onDragLeave={() => setDropTarget(null)}
-          onDrop={(e) => { setDropTarget(null); onDrop(e, label); }}
+          onDrop={(e) => { 
+            e.stopPropagation(); // STRICT: Don't trigger parent or root drop
+            setDropTarget(null); 
+            onDrop(e, label); 
+          }}
           className={`label-tree-item ${dropTarget === label ? "drop-active" : ""}`}
           onClick={() => {
             if (addRange) handleAddEntity(label);
@@ -213,28 +259,6 @@ export function AnnotationPanel({
       });
       if (selectedEntity) setSelectedEntity(updated);
       setChangeLabelMenu(null);
-    } catch (e: any) {
-      alert(e.message);
-    }
-  };
-
-  const handleSpanChange = async () => {
-    const sel = window.getSelection();
-    if (!sel || sel.isCollapsed || !selectedEntity || !textRef.current) return;
-    const off = getSelectionOffsets(textRef.current, doc.text);
-    if (!off) return;
-    if (hasOverlap(off.start, off.end, doc.entities, selectedEntity.id)) {
-        alert("New span overlaps with existing entity");
-        return;
-    }
-    try {
-      const updated = await patchSpan(projectId, doc.id, selectedEntity.id, off.start, off.end);
-      onDocChange({
-        ...doc,
-        entities: doc.entities.map(e => e.id === selectedEntity.id ? updated : e).sort((a, b) => a.start - b.start)
-      });
-      setSelectedEntity(updated);
-      setEditSpanMode(false);
     } catch (e: any) {
       alert(e.message);
     }
@@ -305,39 +329,53 @@ export function AnnotationPanel({
             text={doc.text} 
             entities={doc.entities} 
             onEntityClick={(e) => {
-              // Show quick label change menu on click
-              const rect = (window.event as MouseEvent);
-              setChangeLabelMenu({ entity: e, x: rect.clientX, y: rect.clientY });
+              const event = window.event as MouseEvent;
+              setChangeLabelMenu({ 
+                entity: e, 
+                x: event.clientX, 
+                y: event.clientY 
+              });
               setSelectedEntity(e);
+              setAddRange(null); 
             }}
             selectedEntityId={selectedEntity?.id || null}
+            hideLabels={editSpanMode}
           />
-
-          {addRange && (
-            <div className="floating-menu" style={{ left: Math.min(window.innerWidth - 320, addRange.x - 150), top: addRange.y + 10 }}>
-              <div style={{ fontSize: "0.8rem", fontWeight: 800, marginBottom: "0.5rem", color: "var(--accent)" }}>ASSIGN CATEGORY</div>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.5rem", maxHeight: "200px", overflowY: "auto", paddingRight: "4px" }}>
-                {flatLabels.map(l => (
-                  <button key={l} className="btn-outline" style={{ padding: "0.5rem", fontSize: "0.75rem", justifyContent: "center" }} onClick={() => handleAddEntity(l)}>{l}</button>
-                ))}
-              </div>
-              <button className="btn-outline" style={{ width: "100%", marginTop: "0.75rem", fontSize: "0.7rem", justifyContent: "center", borderColor: "transparent" }} onClick={() => setAddRange(null)}>Cancel</button>
-            </div>
-          )}
-
-          {changeLabelMenu && (
-            <div className="floating-menu" style={{ left: Math.min(window.innerWidth - 320, changeLabelMenu.x - 150), top: changeLabelMenu.y + 10 }}>
-              <div style={{ fontSize: "0.8rem", fontWeight: 800, marginBottom: "0.5rem", color: "var(--accent)" }}>CHANGE CATEGORY</div>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.5rem", maxHeight: "200px", overflowY: "auto", paddingRight: "4px" }}>
-                {flatLabels.map(l => (
-                  <button key={l} className="btn-outline" style={{ padding: "0.5rem", fontSize: "0.75rem", justifyContent: "center", background: changeLabelMenu.entity.label === l ? "var(--accent-glow)" : "" }} onClick={() => handleLabelChange(l)}>{l}</button>
-                ))}
-              </div>
-              <button className="btn-outline" style={{ width: "100%", marginTop: "0.75rem", fontSize: "0.7rem", justifyContent: "center", borderColor: "transparent" }} onClick={() => setChangeLabelMenu(null)}>Close</button>
-            </div>
-          )}
         </div>
       </div>
+
+      {/* Floating Menus moved to root for reliable fixed positioning */}
+      {addRange && (
+        <div className="floating-menu" style={{ left: addRange.x, top: addRange.y }}>
+          <div style={{ fontSize: "0.8rem", fontWeight: 800, marginBottom: "0.5rem", color: "var(--accent)" }}>Assign Category</div>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.5rem", maxHeight: "200px", overflowY: "auto", paddingRight: "4px" }}>
+            {flatLabels.map(l => (
+              <button 
+                key={l} 
+                className="btn-outline" 
+                style={{ padding: "0.5rem", fontSize: "0.75rem", justifyContent: "center" }} 
+                onMouseDown={(e) => e.preventDefault()} 
+                onClick={() => handleAddEntity(l)}
+              >
+                {l}
+              </button>
+            ))}
+          </div>
+          <button className="btn-outline" style={{ width: "100%", marginTop: "0.75rem", fontSize: "0.7rem", justifyContent: "center", borderColor: "transparent" }} onClick={() => setAddRange(null)}>Cancel</button>
+        </div>
+      )}
+
+      {changeLabelMenu && (
+        <div className="floating-menu" style={{ left: changeLabelMenu.x, top: changeLabelMenu.y }}>
+          <div style={{ fontSize: "0.8rem", fontWeight: 800, marginBottom: "0.5rem", color: "var(--accent)" }}>Change label</div>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.5rem", maxHeight: "200px", overflowY: "auto", paddingRight: "4px" }}>
+            {flatLabels.map(l => (
+              <button key={l} className="btn-outline" style={{ padding: "0.5rem", fontSize: "0.75rem", justifyContent: "center", background: changeLabelMenu.entity.label === l ? "var(--accent-glow)" : "" }} onClick={() => handleLabelChange(l)}>{l}</button>
+            ))}
+          </div>
+          <button className="btn-outline" style={{ width: "100%", marginTop: "0.75rem", fontSize: "0.7rem", justifyContent: "center", borderColor: "transparent" }} onClick={() => setChangeLabelMenu(null)}>Close</button>
+        </div>
+      )}
 
       <aside 
         className="right-panel"
