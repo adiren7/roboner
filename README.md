@@ -9,8 +9,8 @@ A SOTA platform for benchmarking and refining Named Entity Recognition (NER) mod
 ### Clone the repository
 
 ```bash
-git clone https://github.com/adiren7/ner_benchmark_app.git
-cd ner_benchmark_app_backend
+git clone https://github.com/adiren7/roboner.git
+cd roboner
 ```
 
 ### Services
