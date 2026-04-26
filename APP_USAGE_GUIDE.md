@@ -41,8 +41,5 @@ Once created, click **Annotate** on your project card.
 ---
 
 ### 🎥 Demonstration Video
-<video width="800" controls>
-  <source src="media/vide.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[![Watch the video](media/thumbnail.png)](media/vide.mp4)
 ---
