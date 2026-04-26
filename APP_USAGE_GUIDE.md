@@ -41,5 +41,5 @@ Once created, click **Annotate** on your project card.
 ---
 
 ### 🎥 Demonstration Video
-[![Watch the video](media/thumbnail.png)](media/vide.mp4)
+[![Watch the video](media/thumbnail.png)](media/video.mp4)
 ---

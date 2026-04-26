@@ -1,6 +1,3 @@
 {
-  "name_to_id": {
-    "test-ner": "9d679981-7e17-41ff-9960-dd7d045ad26c",
-    "test": "ad2878bc-634f-42af-981c-7238f741d6dc"
-  }
+  "name_to_id": {}
 }
