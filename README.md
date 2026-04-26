@@ -1,7 +1,7 @@
 # ROBONER Platform
 
 <p align="center">
-  <img src="media/roboner_logo.png" width="200"/>
+  <img src="media/roboner_logo.png" width="300"/>
 </p>
 
 A SOTA platform for benchmarking and refining Named Entity Recognition (NER) models. This tool allows you to upload datasets, perform automated inference using spaCy models, and manually verify/correct annotations with a high efficiency frame based UI.
